@@ -36,7 +36,7 @@ public class TransactionsController : ControllerBase
         };
 
         return Ok(new {
-            ConsultarFechaValorReslt = JsonSerializer.Serialize(response)
+            ConsultarFechaValorResult = JsonSerializer.Serialize(response)
         });
     }
 
@@ -66,7 +66,7 @@ public class TransactionsController : ControllerBase
         };
 
         return Ok(new {
-            ConsultarFondosCuentaReslt = JsonSerializer.Serialize(response)
+            ConsultarFondosCuentaResult = JsonSerializer.Serialize(response)
         });
     }
 
@@ -88,7 +88,7 @@ public class TransactionsController : ControllerBase
         };
 
         return Ok(new {
-            ConsultarFondosCuentaReslt = JsonSerializer.Serialize(response)
+            ConsultarFondosCuentaResult = JsonSerializer.Serialize(response)
         });
     }
 
@@ -156,7 +156,7 @@ public class TransactionsController : ControllerBase
         };
 
         return Ok(new {
-            ConsultarFondosCuentaReslt = JsonSerializer.Serialize(response)
+            ConsultarFondosCuentaResult = JsonSerializer.Serialize(response)
         });
     }
 }
