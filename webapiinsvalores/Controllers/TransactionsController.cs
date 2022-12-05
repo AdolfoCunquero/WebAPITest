@@ -27,8 +27,8 @@ public class TransactionsController : ControllerBase
 
         var response = new {
             datos = new {
-                ds = DateTime.Now.ToUniversalTime(),
-                fv = DateTime.Now.ToUniversalTime()
+                ds = DateTime.Now.ToLocalTime(),
+                fv = DateTime.Now.ToLocalTime()
             },
             respuesta = objTranResult
         };
