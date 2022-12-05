@@ -15,6 +15,8 @@ public class TransactionsController : ControllerBase
     };
     private readonly ILogger<TransactionsController> _logger;
 
+    private static readonly string localTime = DateTime.Now.ToLocalTime().ToString("yyyy-MM-dd'T'HH:mm:ss.fffZ");
+
     public TransactionsController(ILogger<TransactionsController> logger)
     {
         _logger = logger;
@@ -27,8 +29,8 @@ public class TransactionsController : ControllerBase
 
         var response = new {
             datos = new {
-                ds = DateTime.Now.ToLocalTime(),
-                fv = DateTime.Now.ToLocalTime()
+                ds = localTime,
+                fv = localTime
             },
             respuesta = objTranResult
         };
@@ -95,12 +97,14 @@ public class TransactionsController : ControllerBase
     {
         _logger.LogInformation(pJsonString.pJsonString);
 
+        var date = localTime;
+
         var response = new {
             datos = new []{
                 new {
                     ns = 1000,
-                    fs = DateTime.Now.ToLocalTime(),
-                    fv = DateTime.Now.ToLocalTime(),
+                    fs = date,
+                    fv = date,
                     cu = 0,
                     cs = 0,
                     nc = "test",
@@ -124,8 +128,8 @@ public class TransactionsController : ControllerBase
                 },
                 new {
                     ns = 1001,
-                    fs = DateTime.Now.ToLocalTime(),
-                    fv = DateTime.Now.ToLocalTime(),
+                    fs = date,
+                    fv = date,
                     cu = 0,
                     cs = 0,
                     nc = "test",
