@@ -55,7 +55,7 @@ public class TransactionsController : ControllerBase
                     ms = 0
                 },
                 new {
-                    cf = 0,
+                    cf = 1,
                     fo = "test",
                     cm = "test",
                     fm = "test",
