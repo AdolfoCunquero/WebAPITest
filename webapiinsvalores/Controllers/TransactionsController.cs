@@ -156,7 +156,7 @@ public class TransactionsController : ControllerBase
         };
 
         return Ok(new {
-            ConsultarFondosCuentaResult = JsonSerializer.Serialize(response)
+            ConsultarSolicitudesResult = JsonSerializer.Serialize(response)
         });
     }
 }
