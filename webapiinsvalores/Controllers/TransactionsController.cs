@@ -88,7 +88,7 @@ public class TransactionsController : ControllerBase
         };
 
         return Ok(new {
-            ConsultarFondosCuentaResult = JsonSerializer.Serialize(response)
+            ConsultarCorreosPersonaResult = JsonSerializer.Serialize(response)
         });
     }
 
